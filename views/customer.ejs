@@ -1,0 +1,22 @@
+<h1 class="display-2 head">Customers</h1>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for( c of customer){%>
+            <tr>
+                <th scope="row"><%= c.customerId %></th>
+                <td><%= c.name %></td>
+                <td><%= c.email %></td>
+                <td><%= c.balance %></td>
+                <td><a href="/customer/transfer/<%=c.id%>"><button  type="button" class="btn btn-success">View Customer</button></a></td>
+            </tr>
+        <%}%>
+    </tbody>
+</table>

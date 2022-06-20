@@ -1,0 +1,12 @@
+header {
+  z-index: 999;
+  top: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: aqua;
+  margin: auto; }
+  header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }

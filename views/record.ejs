@@ -1,0 +1,21 @@
+<h1 class="display-2 head">Tranfer Record</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Tranfer Id</th>
+            <th scope="col">Sender</th>
+            <th scope="col">Receiver</th>
+            <th scope="col">Amount Transfered</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for( c of tranferDetail){%>
+            <tr>
+                <th scope="row"><%= c.transferId %></th>
+                <td><%= c.sender %></td>
+                <td><%= c.receiver %></td>
+                <td><%= c.amount %></td>
+            </tr>
+        <%}%>
+    </tbody>
+</table>

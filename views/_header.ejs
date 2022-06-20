@@ -1,0 +1,33 @@
+<header>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/bank.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                Spark Bank
+            </a>
+
+            <%if(req.originalUrl!="/customer"){%>
+                <a class="navbar-brand" href="/customer">
+                    <img src="/images/user.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    View Customers
+                </a>
+            <%}%>
+            
+            <%if(req.originalUrl!="/"){%>
+                <%if(req.originalUrl!="/customer/transfer-record"){%>
+                    <a class="navbar-brand" href="/customer/transfer-record">
+                        <img src="/images/record.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        Transfer Record
+                    </a>
+                <%}%>
+
+                <%if(req.originalUrl!="/customer/create-customer"){%>
+                    <a class="navbar-brand" href="/customer/create-customer">
+                        <img src="/images/user.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                        Create Customers
+                    </a>
+                <%}%>
+            <%}%>
+        </div>
+    </nav>
+</header>

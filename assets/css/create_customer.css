@@ -1,0 +1,9 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; }
+  section form {
+    width: 40%; }
+    section form h1 {
+      margin-bottom: 10px; }

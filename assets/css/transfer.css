@@ -1,0 +1,16 @@
+#content {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  align-items: center; }
+  #content #first {
+    width: 40%; }
+  #content #second {
+    width: 40%; }
+  #content h1 {
+    margin-bottom: 20px; }
+
+.lbel {
+  font-weight: 700; }

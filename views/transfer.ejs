@@ -1,0 +1,60 @@
+<div id="content">
+    <div id="first">
+        <h1> Customer Details</h1>
+        <ol class="list-group list-group ">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">User Id</div>
+                    <%=User.customerId%>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Name</div>
+                    <%=User.name%>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Email</div>
+                    <%=User.email%>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <div id="second">
+        <h1>Money Transfer</h1>
+        <form action="/transfer/<%=User.id%>" method="post">
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label lbel">Sender :</label>
+                <div class="col-sm-5">
+                    <input class="form-control iput" name="sender" type="text" placeholder="<%=User.name%>"
+                        aria-label="Disabled input example" disabled>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-3 col-form-label lbel">Select Reciever :</label>
+                <div class="col-sm-5">
+                    <select class="form-select iput" name="receiver" aria-label="Default select example">
+                        <option selected>Select</option>
+                        <%for(all of Customers){%>
+                            <%if(all.name!=User.name){%>
+                                <option><%=all.name%></option>
+                            <%}%>
+                        <%}%>   
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputNumber3" class="col-sm-5 col-form-label lbel">Amount to be transferred &#8377;
+                    :</label>
+                <div class="col-sm-5">
+                    <input class="form-control iput" name="amount" type="number" placeholder="1000">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Transfer</button>
+        </form>
+    </div>
+</div>
